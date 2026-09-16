@@ -1,0 +1,68 @@
+{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "LoL Kill Sounds",
+    "author": "You",
+    "version": "1.0.0",
+    "minimum-overwolf-version": "0.245.0",
+    "minimum-gep-version": "0.245.0",
+    "description": "Joue automatiquement un son (envoye a OBS) a chaque kill fait dans League of Legends, en fonction du nombre de kills consecutifs.",
+    "dock_button_title": "Kill Sounds",
+    "icon": "assets/icons/IconMouseOver.png",
+    "icon_gray": "assets/icons/IconMouseNormal.png",
+    "launcher_icon": "assets/icons/desktop-icon.ico",
+    "splash_image": "assets/icons/splash.png",
+    "window_icon": "assets/icons/window-icon.png"
+  },
+  "permissions": [
+    "GameInfo",
+    "FileSystem",
+    "Extensions"
+  ],
+  "data": {
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "background/background.html",
+        "is_background_page": true,
+        "background_optimization": false
+      },
+      "main": {
+        "file": "main/main.html",
+        "transparent": true,
+        "resizable": true,
+        "size": { "width": 340, "height": 560 },
+        "min_size": { "width": 300, "height": 420 },
+        "in_game_only": false,
+        "show_in_taskbar": true,
+        "desktop_only": true,
+        "native_window": true
+      },
+      "settings": {
+        "file": "settings/settings.html",
+        "transparent": true,
+        "resizable": true,
+        "size": { "width": 460, "height": 640 },
+        "min_size": { "width": 420, "height": 560 },
+        "show_in_taskbar": true,
+        "desktop_only": true,
+        "native_window": true
+      }
+    },
+    "game_events": [5426],
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [5426]
+    },
+    "launch_events": [
+      {
+        "event": "GameLaunch",
+        "event_data": {
+          "game_ids": [5426]
+        },
+        "start_minimized": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>LoL Kill Sounds - Settings</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header" id="drag-region">
+      <span class="title">SETTINGS</span>
+      <div class="window-controls">
+        <button id="btn-close" title="Fermer">&times;</button>
+      </div>
+    </header>
+
+    <div class="content">
+      <section class="group">
+        <h3>Sounds</h3>
+        <label>Sound folder</label>
+        <div class="row">
+          <input type="text" id="input-sounds-folder" placeholder="C:\...\sounds" />
+          <button id="btn-browse-folder">...</button>
+        </div>
+        <div class="hint">
+          Doit contenir les sous-dossiers 1kill, 2kill, 3kill, 4kill, 5kill.
+        </div>
+      </section>
+
+      <section class="group">
+        <h3>OBS</h3>
+        <label>OBS Host</label>
+        <input type="text" id="input-obs-host" placeholder="127.0.0.1" />
+
+        <label>OBS Port</label>
+        <input type="number" id="input-obs-port" placeholder="4455" />
+
+        <label>OBS Password</label>
+        <input type="password" id="input-obs-password" placeholder="********" />
+
+        <label>OBS Source</label>
+        <input type="text" id="input-obs-source" placeholder="LoL Kill Sound" />
+      </section>
+
+      <section class="group">
+        <h3>Anti-repeat</h3>
+        <label>History size</label>
+        <input type="number" id="input-history-size" min="0" max="20" placeholder="5" />
+      </section>
+
+      <section class="group">
+        <h3>Application</h3>
+        <label class="checkbox-row">
+          <input type="checkbox" id="input-enabled" />
+          Enable kill sounds
+        </label>
+      </section>
+
+      <div class="actions">
+        <button id="btn-save" class="save-btn">Enregistrer</button>
+      </div>
+      <div class="save-status" id="save-status"></div>
+    </div>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

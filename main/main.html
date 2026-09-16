@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>LoL Kill Sounds</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header" id="drag-region">
+      <span class="title">LOL KILL SOUNDS</span>
+      <div class="window-controls">
+        <button id="btn-minimize" title="Reduire">&#8211;</button>
+        <button id="btn-close" title="Fermer">&times;</button>
+      </div>
+    </header>
+
+    <section class="status-block">
+      <div class="status-line">
+        <span class="dot" id="dot-lol"></span>
+        <span id="text-lol">League of Legends detecte</span>
+      </div>
+      <div class="status-line">
+        <span class="dot" id="dot-obs"></span>
+        <span id="text-obs">OBS connecte</span>
+      </div>
+    </section>
+
+    <section class="streak-block">
+      <div class="streak-label">Current Kill Streak</div>
+      <div class="streak-value" id="streak-value">0</div>
+    </section>
+
+    <section class="last-sound-block">
+      <div class="last-sound-label">Last Sound</div>
+      <div class="last-sound-value" id="last-sound-value">-</div>
+    </section>
+
+    <section class="toggle-block">
+      <button id="btn-toggle" class="toggle-btn">ON / OFF</button>
+    </section>
+
+    <section class="test-block">
+      <div class="test-grid">
+        <button class="test-btn" data-streak="1">TEST 1 KILL</button>
+        <button class="test-btn" data-streak="2">TEST 2 KILLS</button>
+        <button class="test-btn" data-streak="3">TEST 3 KILLS</button>
+        <button class="test-btn" data-streak="4">TEST 4 KILLS</button>
+        <button class="test-btn" data-streak="5">TEST 5 KILLS</button>
+      </div>
+      <button id="btn-test-obs" class="test-obs-btn">TEST OBS</button>
+    </section>
+
+    <section class="sound-stats-block" id="sound-stats"></section>
+
+    <section class="footer-block">
+      <button id="btn-settings" class="settings-btn">SETTINGS</button>
+    </section>
+
+    <section class="logs-block">
+      <div class="logs-header">Logs</div>
+      <div class="logs-content" id="logs-content"></div>
+    </section>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
